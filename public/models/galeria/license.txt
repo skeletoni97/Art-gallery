@@ -1,0 +1,11 @@
+Model Information:
+* title:	Galeria
+* source:	https://sketchfab.com/3d-models/galeria-3bafa940d56841548e155cd7752167c9
+* author:	Feroe arquitectura (https://sketchfab.com/montiellila)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Galeria" (https://sketchfab.com/3d-models/galeria-3bafa940d56841548e155cd7752167c9) by Feroe arquitectura (https://sketchfab.com/montiellila) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
