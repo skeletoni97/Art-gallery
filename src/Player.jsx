@@ -1,9 +1,9 @@
+import * as RAPIER from "@dimforge/rapier3d-compat";
+import { useFrame } from "@react-three/fiber";
+import { CapsuleCollider, RigidBody, useRapier } from "@react-three/rapier";
+import { useRef } from "react";
 import * as THREE from "three";
-import * as RAPIER from "@dimforge/rapier3d-compat"
-import {CapsuleCollider, RigidBody, useRapier} from "@react-three/rapier";
-import {useEffect, useRef, useState} from "react";
-import {usePersonControls} from "./hooks.js";
-import {useFrame} from "@react-three/fiber";
+import { usePersonControls } from "./hooks.js";
 
 
 const MOVE_SPEED = 5;
@@ -35,7 +35,7 @@ export const Player = () => {
         // jumping
         const world = rapier.world;
         const ray = world.castRay(new RAPIER.Ray(playerRef.current.translation(), { x: 0, y: -1, z: 0 }));
-        const grounded = ray && ray.collider && Math.abs(ray.toi) <= 1.5;
+        const grounded = ray && ray.collider && Math.abs(ray.toi) <= 4;
         if (jump && grounded) doJump();
 
         // moving camera
@@ -57,7 +57,7 @@ export const Player = () => {
             <RigidBody colliders={false} mass={1} ref={playerRef} lockRotations>
                 <mesh castShadow>
                     <capsuleGeometry args={[0.5, 0.5]}/>
-                    <CapsuleCollider args={[0.75, 0.5]} />
+                    <CapsuleCollider args={[1.1, 0.5]} />
                 </mesh>
             </RigidBody>
             <group ref={objectInHandRef}>
